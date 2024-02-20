@@ -1,0 +1,108 @@
+import java.util.*;
+public class ArraysFarrell 
+{
+
+	//Create Keyboard
+	static Scanner keyboard = new Scanner(System.in);
+	
+	public static void main(String[] args) 
+	{
+		int userInput = 0;
+		
+		do
+		{
+			System.out.println("Welcome! Please Select an Option From the Below Menu!");
+			System.out.println("1) Handle Grades");
+			System.out.println("2) Grade a Quiz");
+			System.out.println("3) How Many Mins?");
+			System.out.println("0) Quit");
+			userInput = keyboard.nextInt();
+			switch(userInput)
+			{
+			//Handle Grades - 	prompt for 10 double grades, one at a time, into an array. 
+			//Use 3 Different helper methods to return the high, low and average grades
+			case 1:
+				handleGrades();
+				break();
+			//Grade a Quiz - prompt for and read 12 characters one at a time to an array, then prompt and read answer key
+			//Pass both arrays into helper grade method, return correct amount of answers, print results
+			case 2:
+				break();
+			//How Many Mins - prompt and read up to 10 non negatives into array, -1 to indicate done. Then Calls helper method to display stats
+			case 3:
+				break();
+				//Quit
+			case 0:
+				break();
+			default:
+				System.out.println("Invalid Menu Input - Please Try Again");
+				break();
+			}//switch
+			
+		}//do
+		while(userInput != 0);
+		
+	}//main
+	
+	public static void handleGrades()
+	{
+		double[] gradesArray = new double[10];
+		double high = 0;
+		double low = 0;
+		double average = 0;
+		
+		//Prompt for and store 10 doubles
+		System.out.println("Please Enter 10 Grades One By One");
+		for (int i = 0;i <10;i++)
+		{
+		 System.out.println("Enter Grade # "+i);
+		 gradesArray[i] = keyboard.nextDouble();
+		}//for
+		//Call findHigh
+		high = findHigh(gradesArray);
+		//Call findLow
+		low = findLow(gradesArray);
+		//Call findAverage
+		average = findAverage(gradesArray);
+		
+		//Print Results of Methods
+		System.out.println("The Highest Grade Found Was: "+high);
+		System.out.println("The Lowest Grade Found Was: "+low);
+		System.out.println("The Average Grade Was: "+average);
+		
+	}//handleGrades
+	
+	public static double findHigh(double[] arrayOfdoubles)
+	{
+		double currentHigh = arrayOfdoubles[0];
+		for(int i = 1;i<10;i++)
+		{
+			if (arrayOfdoubles[i]> currentHigh)
+				currentHigh = arrayOfdoubles[i];
+		}//for
+		return currentHigh;
+	}//findHigh
+	
+	public static double findLow(double[] arrayOfdoubles)
+	{
+		double currentLow = arrayOfdoubles[0];
+		for(int i = 1;i<10;i++)
+		{
+			if (arrayOfdoubles[i] < currentLow)
+				currentLow = arrayOfdoubles[i];
+		}//for
+		return currentLow;
+	}//findLow
+	
+	public static double findAverage(double[] arrayOfdoubles)
+	{
+		double average = 0;
+		double runningCount = 0;
+		for(int i = 0;i<10;i++)
+			runningCount += arrayOfdoubles[i];
+		
+		average = runningCount / arrayOfdoubles.length;
+		return average;
+	}//findAverage
+	
+}//Prog0Farrell

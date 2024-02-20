@@ -1,0 +1,2 @@
+ - prompt for and read 12 characters one at a time to an array, then prompt and read answer key
+			//Pass both arrays into helper grade method, return correct amount of answers, print results
