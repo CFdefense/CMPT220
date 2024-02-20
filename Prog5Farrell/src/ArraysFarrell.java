@@ -42,8 +42,9 @@ public class ArraysFarrell
 			case 2:
 				gradeQuiz();
 				break;
-			//How Many Mins - prompt and read up to 10 non negatives into array, -1 to indicate done. Then Calls helper method to display stats
+			//How Many Mins
 			case 3:
+				howManyMins();
 				break;
 				//Quit
 			case 0:
@@ -140,26 +141,68 @@ public class ArraysFarrell
 		char[] keyArray = new char[12];
 		int totalCorrect = 0;
 		double percentileGrade = 0.0;
-		char letterGrade = ' ';
+		String letterGrade = "";
+		char userAnswer = ' ';
 		
 		for(int i = 0;i<inputArray.length;i++)
 		{
-			System.out.println("Enter Answer #"+(i+1));
-			inputArray[i] = keyboard.next().toUpperCase().charAt(0);
+			do
+			{
+				System.out.println("Enter Answer #"+(i+1)+" (A,B,C or D)");
+				userAnswer = keyboard.next().toUpperCase().charAt(0);
+				System.out.println(userAnswer);
+			}//do
+			while(userAnswer != 'A' && userAnswer != 'B' && userAnswer != 'C' && userAnswer != 'D');
+			inputArray[i]=userAnswer;
 		}//for
+		
 		for(int i = 0;i<keyArray.length;i++)
 		{
-			System.out.println("Enter Correct Answer For #"+(i+1));
-			keyArray[i] = keyboard.next().toUpperCase().charAt(0);
+			do
+			{
+			System.out.println("Enter Correct Answer For #"+(i+1)+" (A,B,C, or D");
+			userAnswer = keyboard.next().toUpperCase().charAt(0);
+			}//do
+			while(userAnswer != 'A' && userAnswer != 'B' && userAnswer != 'C' && userAnswer != 'D');
+			keyArray[i] = userAnswer;
 		}//for
-		totalCorrect = gradeAquiz(inputArray,keyArray);
-		percentileGrade = totalCorrect/12;
-		if percentileGrade //continue HEREEEE
+		
+		//Call gradeAquiz and convert total correct into a score out of 100
+		totalCorrect = gradeAQuiz(inputArray,keyArray);
+		percentileGrade = (totalCorrect*100)/12;
+		
+		//Determine Letter Grade on Schwartz's 10 Point Scale
+		if (percentileGrade >= 90)
+			letterGrade = "A";
+		else if (percentileGrade >=88)
+			letterGrade = "A-";
+		else if (percentileGrade >=85)
+			letterGrade = "B+";
+		else if (percentileGrade >= 80)
+			letterGrade = "B";
+		else if (percentileGrade >= 78)
+			letterGrade = "B-";
+		else if (percentileGrade >= 75)
+			letterGrade = "C+";
+		else if (percentileGrade >= 70)
+			letterGrade = "C";
+		else if (percentileGrade >= 68)
+			letterGrade = "C-";
+		else if (percentileGrade >= 65)
+			letterGrade = "D+";
+		else if (percentileGrade >= 60)
+			letterGrade = "D";
+		else
+			letterGrade = "F";
+		
+		//Print Results to User
+		System.out.printf("The Quiz Score is %.2f%% \n",percentileGrade);
+		System.out.println("The Quiz Letter Grade is "+letterGrade);
 		
 	}//gradeQuiz
 	
 	//This method will receive two arrays and compare them to return the total amount of correct answers.
-	public static int gradeAquiz(char[] userAnswers, char[] answerKey)
+	public static int gradeAQuiz(char[] userAnswers, char[] answerKey)
 	{
 		//Initialize Variables
 		int correctCount = 0;
@@ -171,5 +214,57 @@ public class ArraysFarrell
 		}//for
 		return correctCount;
 	}//gradeAquiz
+	
+	//This method will prompt and read up to 10 non negatives into array, -1 to indicate that the user is done. 
+	//Then Calls helper method to display the array , the minimum value in the array, and the number of times that minimum is in the array
+	public static void howManyMins()
+	{
+		//Initialize Variables
+		int[] arrayOfints = new int[10];
+		int counter = 0;
+		boolean isNegative = false;
+		int userAnswer = 0;
+		
+		
+		while(counter<arrayOfints.length && isNegative != true)
+		{
+			System.out.println("Enter number #"+(counter+1)+"(Enter a negative number to Stop)");
+			userAnswer = keyboard.nextInt();
+			if (userAnswer <0)
+				isNegative = true;
+			else
+				arrayOfints[counter] = userAnswer;
+			counter++;
+			
+		}
+		//Call Helper method to calculate array and display stats
+		minsInArray(arrayOfints,counter);
+	}//howManymins
+	
+	public static void minsInArray(int[] inputArray, int size)
+	{
+		int[] newSizearray = new int[size];
+		int minFound = Integer.MAX_VALUE;
+		int minCount = 0;
+		for(int i = 0;i<size;i++)
+			newSizearray[i] = inputArray[i];
+		
+		//find min
+		for(int i = 0;i<newSizearray.length;i++)
+		{
+			if(newSizearray[i]<minFound)
+				minFound = newSizearray[i];
+		}//for
+		for(int i = 0;i<newSizearray.length;i++)
+		{
+			if(newSizearray[i] == minFound)
+				minCount++;
+		}//for
+	
+		//Print results to user
+		System.out.println("Array contents: " + Arrays.toString(newSizearray));
+		System.out.println("The minimum value in the array is "+minFound);
+		System.out.println("The minimum value in the array was found "+minCount+" times");
+	}//minsInArray
 	
 }//Prog0Farrell
