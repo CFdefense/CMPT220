@@ -243,10 +243,11 @@ public class ArraysFarrell
 	
 	public static void minsInArray(int[] inputArray, int size)
 	{
-		int[] newSizearray = new int[size];
+		int[] newSizearray = new int[size-1];
 		int minFound = Integer.MAX_VALUE;
 		int minCount = 0;
-		for(int i = 0;i<size;i++)
+		int printCount = 0;
+		for(int i = 0;i<(size-1);i++)
 			newSizearray[i] = inputArray[i];
 		
 		//find min
@@ -262,9 +263,18 @@ public class ArraysFarrell
 		}//for
 	
 		//Print results to user
-		System.out.println("Array contents: " + Arrays.toString(newSizearray));
+		System.out.print("Array contents: [");
+		do
+		{
+			
+			System.out.print(newSizearray[printCount]+", ");
+			printCount++;
+		}
+		while((printCount+1)<newSizearray.length);
+		System.out.println(newSizearray[printCount]+"]");
 		System.out.println("The minimum value in the array is "+minFound);
-		System.out.println("The minimum value in the array was found "+minCount+" times");
+		System.out.println("The minimum value in the array was found "+minCount+" times \n");
 	}//minsInArray
 	
 }//Prog0Farrell
+
