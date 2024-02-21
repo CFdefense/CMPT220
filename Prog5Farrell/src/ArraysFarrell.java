@@ -165,6 +165,7 @@ public class ArraysFarrell
 			inputArray[i]=userAnswer;
 		}//for
 		
+		
 		//Create the key array array by getting user input and convert it into a single upper-case character and check to make sure the input is valid.
 		for(int i = 0;i<keyArray.length;i++)
 		{
@@ -244,11 +245,13 @@ public class ArraysFarrell
 			if (userAnswer <0)
 				isNegative = true;
 			else
+			{
 				arrayOfints[counter] = userAnswer;
-			counter++;
+				counter++;
+			}//else
 			
 		}//while
-		
+		System.out.println(Arrays.toString(arrayOfints));
 		//Call Helper method
 		minsInArray(arrayOfints,counter);
 		
@@ -281,14 +284,24 @@ public class ArraysFarrell
 			if(newSizearray[i] == minFound)
 				minCount++;
 		}//for
-	
+		System.out.println(Arrays.toString(newSizearray));
+		
 		//Print results to user using for loop to simulate the look of an actual array. Stop one before the end of the array to ensure the array looks nice
+		//In addition include user-friendly outputs for edge case
 		System.out.print("Array contents: [");
 		for (count = 0;count<(newSizearray.length-1);count++)
 			System.out.print(newSizearray[count]+", ");
-		System.out.print(newSizearray[count]+"]\n");
-		System.out.println("The minimum value in the array is "+minFound);
-		System.out.println("The minimum value in the array was found "+minCount+" times \n");
+		if (count != 0)
+			System.out.print(newSizearray[count]+"]\n");
+		else
+			System.out.print("]\n");
+		if (minFound != Integer.MAX_VALUE)
+		{
+			System.out.println("The minimum value in the array is "+minFound);
+			System.out.println("The minimum value in the array was found "+minCount+" times \n");
+		}//if
+		else
+			System.out.println("There is no minimum because the array is empty\n");
 		
 	}//minsInArray
 	
