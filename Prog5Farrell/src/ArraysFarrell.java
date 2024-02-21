@@ -2,7 +2,7 @@
 Prog 5
 Due 02/22/24 @ 9:00 PM
 
-Purpose: 
+Purpose: To use a menu and various types of arrays to perform functions such as grading a quiz, finding stats about 10 grades, or information about an arrays minimums.
 
 Input: 
 
@@ -197,7 +197,7 @@ public class ArraysFarrell
 		
 		//Print Results to User
 		System.out.printf("The Quiz Score is %.2f%% \n",percentileGrade);
-		System.out.println("The Quiz Letter Grade is "+letterGrade);
+		System.out.println("The Quiz Letter Grade is "+letterGrade+"\n");
 		
 	}//gradeQuiz
 	
@@ -236,18 +236,18 @@ public class ArraysFarrell
 				arrayOfints[counter] = userAnswer;
 			counter++;
 			
-		}
+		}//while
 		//Call Helper method to calculate array and display stats
 		minsInArray(arrayOfints,counter);
 	}//howManymins
 	
 	public static void minsInArray(int[] inputArray, int size)
 	{
-		int[] newSizearray = new int[size-1];
+		int[] newSizearray = new int[size];
 		int minFound = Integer.MAX_VALUE;
 		int minCount = 0;
-		int printCount = 0;
-		for(int i = 0;i<(size-1);i++)
+		int count = 0;
+		for(int i = 0;i<(size);i++)
 			newSizearray[i] = inputArray[i];
 		
 		//find min
@@ -264,14 +264,9 @@ public class ArraysFarrell
 	
 		//Print results to user
 		System.out.print("Array contents: [");
-		do
-		{
-			
-			System.out.print(newSizearray[printCount]+", ");
-			printCount++;
-		}
-		while((printCount+1)<newSizearray.length);
-		System.out.println(newSizearray[printCount]+"]");
+		for (count = 0;count<(newSizearray.length-1);count++)
+			System.out.print(newSizearray[count]+", ");
+		System.out.print(newSizearray[count]+"]\n");
 		System.out.println("The minimum value in the array is "+minFound);
 		System.out.println("The minimum value in the array was found "+minCount+" times \n");
 	}//minsInArray
