@@ -91,7 +91,8 @@ public class ArraysFarrell
 		//Print Results of Methods
 		System.out.println("The Highest Grade Found Was: "+highestGrade);
 		System.out.println("The Lowest Grade Found Was: "+lowestGrade);
-		System.out.println("The Average Grade Was: "+averageGrade+"\n");
+		System.out.printf("The Average Grade Was: %.2f",averageGrade);
+		System.out.println();
 		
 	}//handleGrades
 	
@@ -251,7 +252,6 @@ public class ArraysFarrell
 			}//else
 			
 		}//while
-		System.out.println(Arrays.toString(arrayOfints));
 		//Call Helper method
 		minsInArray(arrayOfints,counter);
 		
@@ -284,7 +284,6 @@ public class ArraysFarrell
 			if(newSizearray[i] == minFound)
 				minCount++;
 		}//for
-		System.out.println(Arrays.toString(newSizearray));
 		
 		//Print results to user using for loop to simulate the look of an actual array. Stop one before the end of the array to ensure the array looks nice
 		//In addition include user-friendly outputs for edge case
