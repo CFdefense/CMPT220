@@ -2,15 +2,14 @@
 Prog 5
 Due 02/22/24 @ 9:00 PM
 
-Purpose: To use a menu and various types of arrays to perform functions such as grading a quiz, finding stats about 10 grades, or information about an arrays minimums.
+Purpose: To use a menu and various types of arrays to perform the following functions: grading a quiz, finding highest,lowest and average of 10 grades, and finding information about an array's minimums.
 
-Input: 
+Input: userInput, gradesArray, inputArray, keyArray, arrayOfints, newSizearray, minCount
 
-Output:
+Output: highestGrade, lowestGrade, averageGrade, percentileGrade, letterGrade
 
 Certification of Authenticity: I certify that this lab is entirely my own work
 */
-
 
 import java.util.*;
 public class ArraysFarrell 
@@ -19,11 +18,13 @@ public class ArraysFarrell
 	//Create Keyboard
 	static Scanner keyboard = new Scanner(System.in);
 	
+	//This main method will act as a hub to call other methods, after their completion it will return to the main to print the menu again.
 	public static void main(String[] args) 
 	{
 		//Initialize Variables
 		int userInput = 0;
 		
+		//Print the menu to the user and get their input, then test their input in the switch to determine which method to run, quitting if input is 0
 		do
 		{
 			System.out.println("Welcome! Please Select an Option From the Below Menu!");
@@ -38,19 +39,23 @@ public class ArraysFarrell
 			case 1:
 				handleGrades();
 				break;
-			//Grade a Quiz
+				
+			//Grade A Quiz
 			case 2:
 				gradeQuiz();
 				break;
-			//How Many Mins
+				
+			//How Many Minimums
 			case 3:
 				howManyMins();
 				break;
-				//Quit
+				
+			//Quit
 			case 0:
 				break;
+			//Error Catch Bad Input
 			default:
-				System.out.println("Invalid Menu Input - Please Try Again");
+				System.out.println("Invalid Menu Input - Please Try Again\n");
 				break;
 			}//switch
 			
@@ -65,9 +70,9 @@ public class ArraysFarrell
 	{
 		//Initialize Variables
 		double[] gradesArray = new double[10];
-		double high = 0;
-		double low = 0;
-		double average = 0;
+		double highestGrade = 0;
+		double lowestGrade = 0;
+		double averageGrade = 0;
 		
 		//Prompt for and store 10 doubles
 		System.out.println("Please Enter 10 Grades One By One");
@@ -77,16 +82,16 @@ public class ArraysFarrell
 		 gradesArray[i] = keyboard.nextDouble();
 		}//for
 		//Call findHigh
-		high = findHigh(gradesArray);
+		highestGrade = findHigh(gradesArray);
 		//Call findLow
-		low = findLow(gradesArray);
+		lowestGrade = findLow(gradesArray);
 		//Call findAverage
-		average = findAverage(gradesArray);
+		averageGrade = findAverage(gradesArray);
 		
 		//Print Results of Methods
-		System.out.println("The Highest Grade Found Was: "+high);
-		System.out.println("The Lowest Grade Found Was: "+low);
-		System.out.println("The Average Grade Was: "+average+"\n");
+		System.out.println("The Highest Grade Found Was: "+highestGrade);
+		System.out.println("The Lowest Grade Found Was: "+lowestGrade);
+		System.out.println("The Average Grade Was: "+averageGrade+"\n");
 		
 	}//handleGrades
 	
@@ -96,6 +101,7 @@ public class ArraysFarrell
 		//Initialize Variables
 		double currentHigh = arrayOfdoubles[0];
 		
+		//find highest value in the array
 		for(int i = 1;i<10;i++)
 		{
 			if (arrayOfdoubles[i]> currentHigh)
@@ -110,6 +116,7 @@ public class ArraysFarrell
 		//Initialize Variables
 		double currentLow = arrayOfdoubles[0];
 		
+		//find minimum value in the array
 		for(int i = 1;i<10;i++)
 		{
 			if (arrayOfdoubles[i] < currentLow)
@@ -125,9 +132,11 @@ public class ArraysFarrell
 		double average = 0;
 		double runningCount = 0;
 		
+		//increment array values
 		for(int i = 0;i<10;i++)
 			runningCount += arrayOfdoubles[i];
 		
+		//calculate and return average
 		average = runningCount / arrayOfdoubles.length;
 		return average;
 	}//findAverage
@@ -144,18 +153,19 @@ public class ArraysFarrell
 		String letterGrade = "";
 		char userAnswer = ' ';
 		
+		//Create the answers array by getting user input and convert it into a single upper-case character and check to make sure the input is valid.
 		for(int i = 0;i<inputArray.length;i++)
 		{
 			do
 			{
 				System.out.println("Enter Answer #"+(i+1)+" (A,B,C or D)");
 				userAnswer = keyboard.next().toUpperCase().charAt(0);
-				System.out.println(userAnswer);
 			}//do
 			while(userAnswer != 'A' && userAnswer != 'B' && userAnswer != 'C' && userAnswer != 'D');
 			inputArray[i]=userAnswer;
 		}//for
 		
+		//Create the key array array by getting user input and convert it into a single upper-case character and check to make sure the input is valid.
 		for(int i = 0;i<keyArray.length;i++)
 		{
 			do
@@ -167,11 +177,11 @@ public class ArraysFarrell
 			keyArray[i] = userAnswer;
 		}//for
 		
-		//Call gradeAquiz and convert total correct into a score out of 100
+		//Call gradeAquiz and convert total correct into a score out of 100 
 		totalCorrect = gradeAQuiz(inputArray,keyArray);
 		percentileGrade = (totalCorrect*100)/12;
 		
-		//Determine Letter Grade on Schwartz's 10 Point Scale
+		//Determine Letter Grade on Schwartz's 10 Point Scale -switch cannot be used for doubles:( 
 		if (percentileGrade >= 90)
 			letterGrade = "A";
 		else if (percentileGrade >=88)
@@ -207,6 +217,7 @@ public class ArraysFarrell
 		//Initialize Variables
 		int correctCount = 0;
 		
+		//Compare key and answers and increment correctCount.
 		for(int i = 0;i<userAnswers.length;i++)
 		{
 			if(userAnswers[i] == answerKey[i])
@@ -225,7 +236,7 @@ public class ArraysFarrell
 		boolean isNegative = false;
 		int userAnswer = 0;
 		
-		
+		//Create the array and check if conditions to stop have been met
 		while(counter<arrayOfints.length && isNegative != true)
 		{
 			System.out.println("Enter number #"+(counter+1)+"(Enter a negative number to Stop)");
@@ -237,38 +248,48 @@ public class ArraysFarrell
 			counter++;
 			
 		}//while
-		//Call Helper method to calculate array and display stats
+		
+		//Call Helper method
 		minsInArray(arrayOfints,counter);
+		
 	}//howManymins
 	
+	
+	//This method will resize an array based on value size, then find the minimum and how many times that minimum is in the array, then it will print those results nicely.
 	public static void minsInArray(int[] inputArray, int size)
 	{
+		//Initialize variables
 		int[] newSizearray = new int[size];
 		int minFound = Integer.MAX_VALUE;
 		int minCount = 0;
 		int count = 0;
+		
+		//Create the new array for the new size
 		for(int i = 0;i<(size);i++)
 			newSizearray[i] = inputArray[i];
 		
-		//find min
+		//Find the minimum in the array
 		for(int i = 0;i<newSizearray.length;i++)
 		{
 			if(newSizearray[i]<minFound)
 				minFound = newSizearray[i];
 		}//for
+		
+		//count how many times the minimum occurs
 		for(int i = 0;i<newSizearray.length;i++)
 		{
 			if(newSizearray[i] == minFound)
 				minCount++;
 		}//for
 	
-		//Print results to user
+		//Print results to user using for loop to simulate the look of an actual array. Stop one before the end of the array to ensure the array looks nice
 		System.out.print("Array contents: [");
 		for (count = 0;count<(newSizearray.length-1);count++)
 			System.out.print(newSizearray[count]+", ");
 		System.out.print(newSizearray[count]+"]\n");
 		System.out.println("The minimum value in the array is "+minFound);
 		System.out.println("The minimum value in the array was found "+minCount+" times \n");
+		
 	}//minsInArray
 	
 }//Prog0Farrell
