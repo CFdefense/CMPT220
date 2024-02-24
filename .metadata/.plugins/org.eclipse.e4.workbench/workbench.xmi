@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_9H7H0NApEe6TvevlOlXZGQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_9H7H0dApEe6TvevlOlXZGQ" bindingContexts="_9H89PdApEe6TvevlOlXZGQ">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ArraysFarrell.java&quot; tooltip=&quot;Prog5Farrell/src/ArraysFarrell.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Prog5Farrell/src/ArraysFarrell.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MusicOrdersFarrell.java&quot; tooltip=&quot;Prog4Farrell/src/MusicOrdersFarrell.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Prog4Farrell/src/MusicOrdersFarrell.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HospitalFarrell.java&quot; tooltip=&quot;Prog3Farrell/src/HospitalFarrell.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Prog3Farrell/src/HospitalFarrell.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;Scanner.class&quot; tooltip=&quot;java.util.Scanner&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Prog1Farrell/C:\/Users\/Christian\/Desktop\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&amp;lt;java.util(Scanner.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HospitalFarrell.java&quot; tooltip=&quot;Prog2Farrell/src/HospitalFarrell.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Prog2Farrell/src/HospitalFarrell.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;PrintStream.class&quot; tooltip=&quot;java.io.PrintStream&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Prog1Farrell/C:\/Users\/Christian\/Desktop\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&amp;lt;java.io(PrintStream.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;test.java&quot; tooltip=&quot;test/src/test/test.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/test/src/test/test.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ChangeMakerFarrell.java&quot; tooltip=&quot;Prog1Farrell/src/ChangeMakerFarrell.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Prog1Farrell/src/ChangeMakerFarrell.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ChangeMakerFarrell.java&quot; tooltip=&quot;ChangeMakerFarrell/src/ChangeMakerFarrell.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/ChangeMakerFarrell/src/ChangeMakerFarrell.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_9H7H0dApEe6TvevlOlXZGQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_9H7H0tApEe6TvevlOlXZGQ" label="%trimmedwindow.label.eclipseSDK" x="271" y="-21" width="1024" height="827">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_9H7H0dApEe6TvevlOlXZGQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_9H7H0tApEe6TvevlOlXZGQ" label="%trimmedwindow.label.eclipseSDK" x="298" y="-21" width="1024" height="827">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -81,7 +81,7 @@
           <tags>persp.editorOnboardingCommand:Show Key Assist$$$Ctrl+Shift+L</tags>
           <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
           <tags>persp.editorOnboardingCommand:Open Type$$$Ctrl+Shift+T</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_9H7H1dApEe6TvevlOlXZGQ" selectedElement="_9H7H1tApEe6TvevlOlXZGQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_9H7H1dApEe6TvevlOlXZGQ" selectedElement="_9H7H6dApEe6TvevlOlXZGQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_9H7H1tApEe6TvevlOlXZGQ" containerData="2615" selectedElement="_9H7H19ApEe6TvevlOlXZGQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_9H7H19ApEe6TvevlOlXZGQ" containerData="6000" selectedElement="_9H7H39ApEe6TvevlOlXZGQ" horizontal="true">
                 <children xsi:type="basic:PartStack" xmi:id="_9H7H2NApEe6TvevlOlXZGQ" elementId="bottom" visible="false" containerData="5000" selectedElement="_9H7H2dApEe6TvevlOlXZGQ">
@@ -132,7 +132,6 @@
                     </children>
                   </children>
                   <children xsi:type="basic:PartStack" xmi:id="_9H7H5dApEe6TvevlOlXZGQ" elementId="PartStack@4535ed24" containerData="5000" selectedElement="_9H7H5tApEe6TvevlOlXZGQ">
-                    <tags>active</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_9H7H5tApEe6TvevlOlXZGQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_9H7wOtApEe6TvevlOlXZGQ" closeable="true">
                       <tags>View</tags>
                       <tags>categoryTag:General</tags>
@@ -236,6 +235,7 @@
       <children xsi:type="basic:PartStack" xmi:id="_9H7v6NApEe6TvevlOlXZGQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_9H7v8dApEe6TvevlOlXZGQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_9H7v6dApEe6TvevlOlXZGQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="HospitalFarrell.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HospitalFarrell.java&quot; partName=&quot;HospitalFarrell.java&quot; title=&quot;HospitalFarrell.java&quot; tooltip=&quot;Prog2Farrell/src/HospitalFarrell.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Prog2Farrell/src/HospitalFarrell.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;3748&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;690&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -265,10 +265,12 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_9H7v8dApEe6TvevlOlXZGQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ArraysFarrell.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ArraysFarrell.java&quot; partName=&quot;ArraysFarrell.java&quot; title=&quot;ArraysFarrell.java&quot; tooltip=&quot;Prog5Farrell/src/ArraysFarrell.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Prog5Farrell/src/ArraysFarrell.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;9367&quot; selectionTopPixel=&quot;3556&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ArraysFarrell.java&quot; partName=&quot;ArraysFarrell.java&quot; title=&quot;ArraysFarrell.java&quot; tooltip=&quot;Prog5Farrell/src/ArraysFarrell.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Prog5Farrell/src/ArraysFarrell.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;9367&quot; selectionTopPixel=&quot;690&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -350,8 +352,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_9H7wO9ApEe6TvevlOlXZGQ" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -443,7 +443,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9H8WGdApEe6TvevlOlXZGQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_DfSdcNB1Ee64N5ll0yYc9A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_9H_aatApEe6TvevlOlXZGQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_13NiYNLeEe6b-Jf8ncU8jA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_9H_aatApEe6TvevlOlXZGQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9H8WJtApEe6TvevlOlXZGQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -474,7 +474,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9H8WY9ApEe6TvevlOlXZGQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_DfUSoNB1Ee64N5ll0yYc9A" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_9H_aJdApEe6TvevlOlXZGQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_13PXkNLeEe6b-Jf8ncU8jA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_9H_aJdApEe6TvevlOlXZGQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9H8Wb9ApEe6TvevlOlXZGQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
