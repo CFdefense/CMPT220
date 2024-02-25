@@ -1,4 +1,3 @@
-import java.util.*;
 public class StepsFarrell 
 {
 	//Declare Instance Variables
@@ -27,9 +26,17 @@ public class StepsFarrell
 	//Method will calculate and return the number of fillStyle characters needed for the steps
 	public int calcArea()
 	{
+		//Initialize Instance Variable
 		int area = 0;
+		int currentStep = 0;
+		
+		//Loop through the 'drawing' of the steps but instead of drawing one well append the count
 		for(int step = 0; step < myNumSteps; step++)
-			area += area+ myStepWidth;	
+		{
+			currentStep += myStepWidth;
+			for(int i = 0;i<currentStep;i++)
+				area++;
+		}//for
 		return area;
 	}//calcArea
 	
@@ -39,12 +46,17 @@ public class StepsFarrell
 		//Instance Variable
 		int currentStep = 0;
 		
-		//loop for each step and print the corresponding row
+		//loop for each step and then loop again for how long the currentstep is
 		for(int step = 0; step < myNumSteps; step++)
 		{
 			currentStep += myStepWidth;
-			System.out.println(myFillStyle * currentStep);
+			System.out.println();
+			for(int i = 0;i<currentStep;i++)
+				System.out.print(myFillStyle);
+			
 		}//for
+		System.out.println();
+		System.out.println();
 	}//drawSteps
 	
 	//Method will draw thick steps to the console
@@ -53,13 +65,21 @@ public class StepsFarrell
 		//Instance Variable
 		int currentStep = 0;
 		
-		//loop for each step and print the corresponding row
+		//loop for each step 3 times, printing for how long the currentstep is
+		System.out.println();
 		for(int step = 0; step<myNumSteps; step++)
 		{
 			currentStep += myStepWidth;
-			for(int i = 0; i<3; i++)
-				System.out.println(myFillStyle * currentStep);
+			
+			for(int i =0; i<3;i++)
+			{
+				System.out.println();
+				for(int j = 0;j<currentStep;j++)
+				System.out.print(myFillStyle);
+			}
 		}//for
+		System.out.println();
+		System.out.println();
 	}//drawThickSteps
 	
 	 

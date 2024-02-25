@@ -19,7 +19,6 @@ public class StepsDemoFarrell
 	{
 		//Declare & Initialize Variables
 		StepsFarrell defaultSteps = new StepsFarrell();
-		String input = "";
 		char userInput = ' ';
 		int responseInputInteger = 0;
 		char responseInputChar = ' ';
