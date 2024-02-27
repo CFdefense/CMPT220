@@ -25,7 +25,7 @@ public class StepsDemoFarrell
 		int calcArea = 0;
 		String textDescription = "";
 		
-		//Print the menu to the user and get their input, then test their input in the switch to determine which method to run, quitting if input is 'Q'
+		//Print the menu to the user and get their input, 
 			do
 			{
 				System.out.println("Welcome! Please Select an Option From the Below Menu!");
@@ -39,11 +39,11 @@ public class StepsDemoFarrell
 				System.out.println("Q : Quit");
 				userInput = keyboard.next().toUpperCase().charAt(0);
 				
+				//Switch case to determine which action to take based on input
 				switch(userInput)
 				{
 				//Assign the Step Width 	
 				case 'W':
-				case 'w':
 					System.out.println("What would you like to make the Step Width?");
 					responseInputInteger = keyboard.nextInt();
 					while(responseInputInteger<= 0)
@@ -56,7 +56,6 @@ public class StepsDemoFarrell
 					
 				//Assign the Number of Steps
 				case 'N':
-				case 'n':
 					System.out.println("What would you like to make the Number of Steps?");
 					responseInputInteger = keyboard.nextInt();
 					while(responseInputInteger<= 0)
@@ -69,7 +68,6 @@ public class StepsDemoFarrell
 					
 				//Assign the Fill Style
 				case 'F':
-				case 'f':
 					System.out.println("What would you like to make the Fill Style?");
 					responseInputChar = keyboard.next().toUpperCase().charAt(0);
 					while(responseInputChar == ' ')
@@ -82,33 +80,28 @@ public class StepsDemoFarrell
 					
 				//Calculate the Area
 				case 'A':
-				case 'a':
 					calcArea = defaultSteps.calcArea();
 					System.out.println("The Calculated Area is " + calcArea);
 					break;
 					
 				//Text Description of the Steps
 				case 'T':
-				case 't':
 					textDescription = defaultSteps.toString();
 					System.out.println(textDescription);
 					break;
 					
 				//Draw the Steps
 				case 'D':
-				case 'd':
 					defaultSteps.drawSteps();
 					break;
 					
 				//Draw Thick Steps
 				case 'X':
-				case 'x':
 					defaultSteps.drawThickSteps();
 					break;
 					
 				//Quit
 				case 'Q':
-				case 'q':
 					break;
 					
 				//Error Catch Bad Input
@@ -118,7 +111,9 @@ public class StepsDemoFarrell
 				}//switch
 					
 			}//do
-			while(userInput != "fix");
+			while(userInput != 'Q');
+			
+			//Say goodbye
 			System.out.println("Goodbye");
 
 	}//main
