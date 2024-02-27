@@ -4,9 +4,9 @@
 //
 //Purpose: 
 //
-//Input:
+//Input: userInput, responseInputInteger, responseInputChar
 //
-//Output:
+//Output: calcArea,textDescription, drawSteps, drawThickSteps
 
 //Certification of Authenticity: I certify that this lab is entirely my own work
 import java.util.*;
@@ -118,7 +118,8 @@ public class StepsDemoFarrell
 				}//switch
 					
 			}//do
-			while(userInput != 0);
+			while(userInput != "fix");
+			System.out.println("Goodbye");
 
 	}//main
 
