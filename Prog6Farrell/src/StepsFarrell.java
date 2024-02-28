@@ -65,7 +65,7 @@ public class StepsFarrell
 		//Instance Variable
 		int currentStep = 0;
 		
-		//loop for each step 3 times, printing for how long the currentstep is
+		//loop for each step 3 times, printing for length of currentstep 
 		System.out.println();
 		for(int step = 0; step<myNumSteps; step++)
 		{

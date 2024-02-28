@@ -2,7 +2,8 @@
 //Prog 6
 //Due 02/29/24 before 9:00 AM
 //
-//Purpose: 
+//Purpose: Draw steps of varying sizes and styles depending on a users interaction with a menu. The menu will have options to manipulate the steps
+//and to display data about the steps
 //
 //Input: userInput, responseInputInteger, responseInputChar
 //
@@ -69,12 +70,7 @@ public class StepsDemoFarrell
 				//Assign the Fill Style
 				case 'F':
 					System.out.println("What would you like to make the Fill Style?");
-					responseInputChar = keyboard.next().toUpperCase().charAt(0);
-					while(responseInputChar == ' ')
-					{
-						System.out.println("Invalid Input, What would you like to make the Fill Style?");
-						responseInputChar = keyboard.next().toUpperCase().charAt(0);
-					}//while
+					responseInputChar = keyboard.next().charAt(0);
 					defaultSteps.setFillStyle(responseInputChar);
 					break;
 					
