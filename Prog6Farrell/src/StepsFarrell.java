@@ -5,7 +5,7 @@ public class StepsFarrell
 	private int myNumSteps;
 	private char myFillStyle;
 	
-	//Constructor
+	//Constructor will create a StepsFarrell object with inputted variables
 	public StepsFarrell(int newStepWidth, int newNumSteps, char newFillStyle)
 	{
 		//Initialize Instance Variables
@@ -14,7 +14,7 @@ public class StepsFarrell
 		myFillStyle = newFillStyle;
 	}//StepsFarrell
 	
-	//Null Constructor
+	//Null Constructor will create a StepsFarrell Object with default variables
 	public StepsFarrell()
 	{
 		//Initialize Instance Variables
@@ -65,7 +65,7 @@ public class StepsFarrell
 		//Instance Variable
 		int currentStep = 0;
 		
-		//loop for each step 3 times, printing for length of currentstep 
+		//loop for each step 3 times, printing for length of current step 
 		System.out.println();
 		for(int step = 0; step<myNumSteps; step++)
 		{
@@ -89,7 +89,7 @@ public class StepsFarrell
 	public int getStepWidth()
 	{return myStepWidth;}//getStepWidth
 	
-	//myStepWidth Setter
+	//myStepWidth Setter updates stepWidth
 	public void setStepWidth(int newStepWidth)
 	{myStepWidth = newStepWidth;}//setStepWidth
 
@@ -97,7 +97,7 @@ public class StepsFarrell
 	public int getNumSteps()
 	{return myNumSteps;}//getNumSteps
 	
-	//myNumSteps Setter
+	//myNumSteps Setter updates numSteps
 	public void setNumSteps(int newNumSteps)
 	{myNumSteps = newNumSteps;}//setNumSteps
 	
@@ -105,11 +105,11 @@ public class StepsFarrell
 	public char getFillStyle()
 	{return myFillStyle;}//getFillStyle
 	
-	//myFillStyle Setter
+	//myFillStyle Setter updates fillStyle
 	public void setFillStyle(char newFillStyle)
 	{myFillStyle = newFillStyle;}//setFillStyle
 	
-	//toString
+	//toString creates a string of the information of the object
 	public String toString()
 	{
 		String summaryString = "My Step Width is " + myStepWidth + "\n";
