@@ -21,7 +21,7 @@ public class OrderFarrell
 		//instance variable
 		boolean success = false;
 		
-		if(mySize < 8) //Should be hard-coded???
+		if(mySize < myMenuItems.length) //Check if space
 		{
 			myMenuItems[mySize++] = menuItem; //add and increment mySize
 			success = true;
@@ -37,7 +37,7 @@ public class OrderFarrell
 		MenuItemFarrell mostExpensiveItem = null;
 		
 		//for total the cost of the order
-		for(int i = 0; i < myMenuItems.length;i++)
+		for(int i = 0; i < mySize;i++)
 		{
 			if(myMenuItems[0].getPrice() > mostExpensive)
 				{
@@ -56,7 +56,7 @@ public class OrderFarrell
 		MenuItemFarrell leastExpensiveItem = null;
 		
 		//for total the cost of the order
-		for(int i = 0; i < myMenuItems.length;i++)
+		for(int i = 0; i < mySize;i++)
 		{
 			if(myMenuItems[0].getPrice() < leastExpensive)
 				{
@@ -73,7 +73,43 @@ public class OrderFarrell
 		//instance variables
 		double totalCost = 0.0;
 		
+		//loop through all menu items and multiply the amount order by the price and then add that to the total cost
+		for(int i = 0;i<mySize;i++)
+		{
+			totalCost += myMenuItems[i].getQuant() * myMenuItems[i].getPrice();
+		}//for
 		return totalCost;
 	}//calcTotal
+	
+	//printList - (DESC)
+	public void printList()
+	{
+		System.out.println("This Order Contains the following...");
+		//for loop to print the details of the name, quant and price for each menu item in the list
+		for(int i = 0; i<mySize;i++)
+			System.out.printf("%s - ct: %d - $%.2f\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
+	}//printList
+	
+	//removeItem - (DESC)
+	public boolean removeItem(String toBeRemoved)
+	{
+		//Instance variables
+		MenuItemFarrell remove = null;
+		boolean result = false;
+		int i = 0;
+		//find where the item to be removed is
+		while (remove == null && i<mySize)
+		{
+			if(myMenuItems[i].getName() == toBeRemoved)
+				result = true;
+			else
+				i++;
+		}//while
+		if(result == true)
+			myMenuItems[i] = myMenuItems[--mySize];
+		
+		return result;
+		
+	}//removeItem
 }//OrderFarrell
 
