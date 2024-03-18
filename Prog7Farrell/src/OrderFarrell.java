@@ -84,29 +84,44 @@ public class OrderFarrell
 	//printList - (DESC)
 	public void printList()
 	{
+		if(mySize != 0)
+		{
 		System.out.println("This Order Contains the following...");
 		//for loop to print the details of the name, quant and price for each menu item in the list
 		for(int i = 0; i<mySize;i++)
 			System.out.printf("%s - ct: %d - $%.2f\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
+		System.out.println();
+		}//if
+		else
+			System.out.println("Order is Empty \n");
 	}//printList
 	
 	//removeItem - (DESC)
-	public boolean removeItem(String toBeRemoved)
+	public boolean removeItem()
 	{
 		//Instance variables
-		MenuItemFarrell remove = null;
 		boolean result = false;
+		int positionToRemove = 0;
 		int i = 0;
-		//find where the item to be removed is
-		while (remove == null && i<mySize)
+		int j = 0;
+		double mostCostly = 0.0;
+		
+		//remove largest
+		for(i = 0;i<mySize;i++)
 		{
-			if(myMenuItems[i].getName() == toBeRemoved)
+			//find the highest
+			if(myMenuItems[i].getPrice() > mostCostly) //should this find the cost*quan or just cost
+				{
+				mostCostly = myMenuItems[i].getPrice();
+				positionToRemove = i;
 				result = true;
-			else
-				i++;
-		}//while
+				}//if
+		}//for
+		
+		//set remove to last in array and decrement size
 		if(result == true)
-			myMenuItems[i] = myMenuItems[--mySize];
+			myMenuItems[positionToRemove] = myMenuItems[mySize-1];
+			mySize--;;
 		
 		return result;
 		
