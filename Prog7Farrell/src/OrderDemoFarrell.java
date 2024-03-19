@@ -1,7 +1,27 @@
+/**
+ * @author Christian Farrell <br>
+ * 
+ * Prog 7 <br>
+ * Due Date and Time: 2/21/24 before 9:00 AM <br>
+ * 
+ * Purpose: This program will serve as a Mcdonalds ordering system, users will be able to add to, manipulate, and view various information about their orders. <br>
+ * 
+ * Input: userInput - Menu Choice, newItemName - Item to add to Order, newItemQuality - How Many Items to add, and newItemPrice - The Price of That Item <br>
+ * 
+ * Output: resultSucess, leastExpensiveItem, mostExpensiveItem, orderSize, totalCost, removedItemSuccess <br>
+ * 
+ *Certification of Authenticity: <br>
+ *I certify that this lab is entirely my own work. <br>
+ */
+
+
+
+
+
 import java.util.*;
 public class OrderDemoFarrell 
 {
-	//Declare Keyboard
+	//Declare and Initialize Scanner 
 	static Scanner keyboard = new Scanner(System.in);
 		
 	public static void main(String[] args) 
@@ -15,7 +35,7 @@ public class OrderDemoFarrell
 		boolean resultSuccess = false;
 		MenuItemFarrell removedMenuItem;
 		MenuItemFarrell newItem;
-	//Welcome user and print menu
+	//Welcome user and print menu, looping the menu until quit is chosen
 	do
 	{
 		System.out.println("Welcome to McDonalds! Please Select an Option From the Below Menu!");
@@ -44,7 +64,7 @@ public class OrderDemoFarrell
 			newItem = new MenuItemFarrell(newItemName, newItemQuantity, newItemPrice); 
 			resultSuccess = myOrder.addToOrder(newItem);
 			
-			//let user know
+			//let user know result
 			if(resultSuccess == true)
 				System.out.println("Sucessfully Added the MenuItem \n");
 			else
@@ -82,7 +102,7 @@ public class OrderDemoFarrell
 		//Delete the Most Expensive MenuItem
 		case 'D':
 			removedMenuItem = myOrder.removeItem();
-			//let user know
+			//let user know result
 			if(removedMenuItem != null)
 				System.out.println("Sucessfully Removed the MenuItem \n");
 			else

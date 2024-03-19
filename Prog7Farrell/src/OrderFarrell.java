@@ -1,6 +1,7 @@
 import java.util.*;
 public class OrderFarrell
 {
+	//Initialize Variables
 	private MenuItemFarrell[] myMenuItems;
 	private int mySize;
 	
@@ -11,11 +12,18 @@ public class OrderFarrell
 		mySize = 0;
 	}//OrderFarrell
 	
-	//mySize Getter
+	/**
+	 * Get Size Method to return the current size of the Order <br>
+	 * @return mySize	Integer representing the amount of items in the order
+	 */
 	public int getSize()
 		{return mySize;}//getSize
 	
-	//addToOrder - (DESC)
+	/**
+	 * addToOrder Method accepts a menu item parameter, then checks if the order has space, adding it to the order if there is space <br>
+	 * @param menuItem	MenuItemFarrell Object created by the user to be added to the order
+	 * @return success	Boolean representing the success or failure of the attempt to add the MenuItem to the order
+	 */
 	public boolean addToOrder(MenuItemFarrell menuItem)
 	{
 		//instance variable
