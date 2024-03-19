@@ -42,5 +42,13 @@ public class MenuItemFarrell
 	public double getPrice()
 		{return myPrice;} //getPrice
 	
+	//toString Method
+	public String toString()
+	{
+		String ans = "My Name is "+ myName + "\n";
+		ans+= "My Quantity is "+ myQuant + "\n";
+		ans+= "My Price is " + myPrice + "\n";
+		return ans;
+	}//toString
 
 }//MenuItemFarrell

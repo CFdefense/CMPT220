@@ -89,7 +89,7 @@ public class OrderFarrell
 		System.out.println("This Order Contains the following...");
 		//for loop to print the details of the name, quant and price for each menu item in the list
 		for(int i = 0; i<mySize;i++)
-			System.out.printf("%s - ct: %d - $%.2f\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
+			System.out.printf("%s - ct: %d - $%.2f ea\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
 		System.out.println();
 		}//if
 		else
@@ -97,10 +97,10 @@ public class OrderFarrell
 	}//printList
 	
 	//removeItem - (DESC)
-	public boolean removeItem()
+	public MenuItemFarrell removeItem()
 	{
 		//Instance variables
-		boolean result = false;
+		MenuItemFarrell result = null;
 		int positionToRemove = 0;
 		int i = 0;
 		int j = 0;
@@ -114,15 +114,16 @@ public class OrderFarrell
 				{
 				mostCostly = myMenuItems[i].getPrice();
 				positionToRemove = i;
-				result = true;
+				result = myMenuItems[i];
 				}//if
 		}//for
 		
 		//set remove to last in array and decrement size
-		if(result == true)
+		if(result != null)
+		{
 			myMenuItems[positionToRemove] = myMenuItems[mySize-1];
-			mySize--;;
-		
+			mySize--;
+		}//if
 		return result;
 		
 	}//removeItem

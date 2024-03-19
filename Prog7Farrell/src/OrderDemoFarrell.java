@@ -13,7 +13,8 @@ public class OrderDemoFarrell
 		double newItemPrice = 0;
 		OrderFarrell myOrder = new OrderFarrell();
 		boolean resultSuccess = false;
-		boolean removalSuccess = false;
+		MenuItemFarrell removedMenuItem;
+		MenuItemFarrell newItem;
 	//Welcome user and print menu
 	do
 	{
@@ -25,7 +26,7 @@ public class OrderDemoFarrell
 		System.out.println("T : Find the total cost of all MenuItems in the Order");
 		System.out.println("P : Print out details about all MenuItems in the Order");
 		System.out.println("D : Delete the Most Expensive MenuItem from the Order");
-		System.out.println("Q : Quit");
+		System.out.println("Q : Quit"); 
 		userInput = keyboard.next().toUpperCase().charAt(0);
 		
 		switch(userInput)
@@ -40,7 +41,7 @@ public class OrderDemoFarrell
 			newItemQuantity = keyboard.nextInt();
 			
 			//create new menuItem and add to order
-			MenuItemFarrell newItem = new MenuItemFarrell(newItemName, newItemQuantity, newItemPrice); //should be done here?
+			newItem = new MenuItemFarrell(newItemName, newItemQuantity, newItemPrice); 
 			resultSuccess = myOrder.addToOrder(newItem);
 			
 			//let user know
@@ -52,24 +53,27 @@ public class OrderDemoFarrell
 		//Find the Least Expensive MenuItem
 		case 'L':
 			if(myOrder.findLeastExpensive() != null)
-				System.out.println("The Least Expensive Item is "+myOrder.findLeastExpensive().getName() + "\n");
+				System.out.println("The Least Expensive Item is the "+ myOrder.findLeastExpensive().getName() + "\n");
 			else
 				System.out.println("Order is Empty \n");
 			break;
 		//Find the Most Expensive MenuItem
 		case 'M':
 			if(myOrder.findLeastExpensive() != null)
-			System.out.println("The Most Expensive Item is "+myOrder.findMostExpensive().getName() + "\n");
+			System.out.println("The Most Expensive Item is the "+myOrder.findMostExpensive().getName() + "\n");
 			else
 				System.out.println("Order is empty \n");
 			break;
 		//Find the number of MenuItems
 		case 'N':
-			System.out.println("The Order has " + myOrder.getSize() + " Menu Items");
+			System.out.println("The Order has " + myOrder.getSize() + " Menu Items\n");
 			break;
 		//Find the total cost of all MenuItems
 		case 'T':
-			System.out.printf("The total cost of all MenuItems is %.2f/n", myOrder.calcTotal());
+			if(myOrder.calcTotal() != 0)
+				System.out.printf("The total cost of all MenuItems is %.2f\n\n", myOrder.calcTotal());
+			else
+				System.out.println("Order is empty\n");
 			break;
 		//Print out details about all MenuItems
 		case 'P':
@@ -77,9 +81,9 @@ public class OrderDemoFarrell
 			break;
 		//Delete the Most Expensive MenuItem
 		case 'D':
-			removalSuccess = myOrder.removeItem();
+			removedMenuItem = myOrder.removeItem();
 			//let user know
-			if(removalSuccess == true)
+			if(removedMenuItem != null)
 				System.out.println("Sucessfully Removed the MenuItem \n");
 			else
 				System.out.println("Removing the MenuItem has Failed \n");
@@ -90,6 +94,6 @@ public class OrderDemoFarrell
 		}//switch
 	}//do
 	while(userInput != 'Q');
-	}//main
-
+	System.out.println("Thanks,Goodbye");
+	}//main	
 }//OrderDemoFarrell
