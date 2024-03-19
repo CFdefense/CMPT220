@@ -4,7 +4,7 @@
  * Prog 7 <br>
  * Due Date and Time: 2/21/24 before 9:00 AM <br>
  * 
- * Purpose: This program will serve as a Mcdonalds ordering system, users will be able to add to, manipulate, and view various information about their orders. <br>
+ * Purpose: This program will serve as a McDonalds ordering system, users will be able to add to, manipulate, and view various information about their orders. <br>
  * 
  * Input: userInput - Menu Choice, newItemName - Item to add to Order, newItemQuality - How Many Items to add, and newItemPrice - The Price of That Item <br>
  * 
@@ -13,11 +13,6 @@
  *Certification of Authenticity: <br>
  *I certify that this lab is entirely my own work. <br>
  */
-
-
-
-
-
 import java.util.*;
 public class OrderDemoFarrell 
 {
@@ -55,10 +50,20 @@ public class OrderDemoFarrell
 		case 'A':
 			System.out.println("Enter the name of the Menu Item");
 			newItemName = keyboard.next();
-			System.out.println("What is the Menu Item's Price?");
-			newItemPrice = keyboard.nextDouble();
-			System.out.println("How Many Would You Like?");
-			newItemQuantity = keyboard.nextInt();
+			
+			//error check the price and the quantity and get response from user
+			do
+			{
+				System.out.println("What is the Menu Item's Price?");
+				newItemPrice = keyboard.nextDouble();
+			}//do
+			while(newItemPrice <= 0);
+			do
+			{
+				System.out.println("How Many Would You Like?");
+				newItemQuantity = keyboard.nextInt();
+			}//do
+			while(newItemQuantity <= 0);
 			
 			//create new menuItem and add to order
 			newItem = new MenuItemFarrell(newItemName, newItemQuantity, newItemPrice); 
@@ -68,7 +73,7 @@ public class OrderDemoFarrell
 			if(resultSuccess == true)
 				System.out.println("Sucessfully Added the MenuItem \n");
 			else
-				System.out.println("Adding the MenuItem has Failed \n");
+				System.out.println("Adding the MenuItem has Failed, Order is Full\n");
 			break;
 		//Find the Least Expensive MenuItem
 		case 'L':
@@ -105,8 +110,8 @@ public class OrderDemoFarrell
 			//let user know result
 			if(removedMenuItem != null)
 				System.out.println("Sucessfully Removed the MenuItem \n");
-			else
-				System.out.println("Removing the MenuItem has Failed \n");
+			else if(myOrder.getSize() == 0)
+				System.out.println("Removing the MenuItem has Failed Due to Order Being Empty \n");
 			break;
 		//Quit
 		case 'Q':

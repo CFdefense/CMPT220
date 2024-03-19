@@ -1,15 +1,27 @@
+
+import java.util.*;
 /**
  * This Class will control the creation and modification of Menu item Elements
  */
-import java.util.*;
 public class MenuItemFarrell 
 {
 	//Initialize Variables 
+	/**
+	 *String for Name of Menu Item
+	 */
 	private String myName;
+	/**
+	 * Integer for Quantity of Menu Item
+	 */
 	private int myQuant;
+	/**
+	 * Double for Price of Menu Item
+	 */
 	private double myPrice;
 	
-	//Null Constructor
+	/**
+	 * Null Constructor for MenuItemFarrell Object to accept no parameters and create a Menu Item with Blank Information
+	 */
 	public MenuItemFarrell()
 	{
 		myName = "";
@@ -17,7 +29,12 @@ public class MenuItemFarrell
 		myPrice = 0.0;
 	}//MenuItemFarrell
 	
-	//Full Constructor
+	/**
+	 * Full Constructor to accept 3 parameters and create an instance of the MenuItemFarrell Object using 3 parameters<br>
+	 * @param newName	String to declare Name 
+	 * @param newQuant	Integer to declare Quantity
+	 * @param newPrice	double to declare Price
+	 */
 	public MenuItemFarrell(String newName, int newQuant, double newPrice)
 	{
 		myName = newName;

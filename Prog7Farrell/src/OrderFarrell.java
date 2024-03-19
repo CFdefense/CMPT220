@@ -1,4 +1,7 @@
 import java.util.*;
+/**
+ * Class OrderFarrell contains the order list and methods to manipulate the contents of that order
+ */
 public class OrderFarrell
 {
 	//Initialize Variables
@@ -108,7 +111,7 @@ public class OrderFarrell
 		System.out.println("This Order Contains the following...");
 		//for loop to print the details of the name, quant and price for each menu item in the list
 		for(int i = 0; i<mySize;i++)
-			System.out.printf("%s - ct: %d - $%.2f ea\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
+			System.out.printf("Item: %s - Quantity: %d - Price: $%.2f ea\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
 		System.out.println();
 		}//if
 		else
