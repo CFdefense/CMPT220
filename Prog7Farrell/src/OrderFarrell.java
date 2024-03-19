@@ -37,7 +37,10 @@ public class OrderFarrell
 		return success;
 	}//addToOrder
 	
-	//findMostExpensive - (DESC)
+	/**
+	 * findMostExpensive Method accepts no parameters and sifts through the order looking for the most expensive item then returns it <br>
+	 * @return mostExpensiveItem	returns the object that has the highest price
+	 */
 	public MenuItemFarrell findMostExpensive()
 	{
 		//instance variables
@@ -56,7 +59,10 @@ public class OrderFarrell
 		return mostExpensiveItem;
 	}//findMostExpensive
 	
-	//findLeastExpensive - (DESC)
+	/**
+	 * findLeastExpensive Method accepts no parameters and sifts through the order looking for the least expensive item then returns it <br>
+	 * @return leastExpensiveItem	returns the object that has the lowest price
+	 */
 	public MenuItemFarrell findLeastExpensive()
 	{
 		//instance variables
@@ -75,7 +81,10 @@ public class OrderFarrell
 		return leastExpensiveItem;
 	}//findLeastExpensive
 	
-	//calcTotal - (DESC)
+	/**
+	 * calcTotal Method accepts no parameters and sifts through the list, tallies up the total price the order will cost <br>
+	 * @return totalCost	value of all Object's price * quantity in the order
+	 */
 	public double calcTotal()
 	{
 		//instance variables
@@ -89,7 +98,9 @@ public class OrderFarrell
 		return totalCost;
 	}//calcTotal
 	
-	//printList - (DESC)
+	/**
+	 * printList Method accepts no parameters and prints the name, quantity, and price of each item in the order<br>
+	 */
 	public void printList()
 	{
 		if(mySize != 0)
@@ -104,7 +115,10 @@ public class OrderFarrell
 			System.out.println("Order is Empty \n");
 	}//printList
 	
-	//removeItem - (DESC)
+	/**
+	 * removeItem Method accepts no parameters, the method removes the most expensive item from the order <br>
+	 * @return result	returns the most expensive item that was removed
+	 */
 	public MenuItemFarrell removeItem()
 	{
 		//Instance variables
