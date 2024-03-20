@@ -109,9 +109,10 @@ public class OrderFarrell
 		if(mySize != 0)
 		{
 		System.out.println("This Order Contains the following...");
-		//for loop to print the details of the name, quant and price for each menu item in the list
-		for(int i = 0; i<mySize;i++)
-			System.out.printf("Item: %s - Quantity: %d - Price: $%.2f ea\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
+		//for each item of type MenuItemFarrell in myMenuItems we print its name, quantity and price
+		for(MenuItemFarrell item : myMenuItems)
+			if(item != null)
+				System.out.printf("Item: %s - Quantity: %d - Price: $%.2f ea\n", item.getName(), item.getQuant(), item.getPrice());
 		System.out.println();
 		}//if
 		else

@@ -119,6 +119,6 @@ public class OrderDemoFarrell
 		}//switch
 	}//do
 	while(userInput != 'Q');
-	System.out.println("Thanks,Goodbye");
+	System.out.println("Thanks, Goodbye");
 	}//main	
 }//OrderDemoFarrell
