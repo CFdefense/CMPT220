@@ -109,7 +109,11 @@ public class OrderDemoFarrell
 			removedMenuItem = myOrder.removeItem();
 			//let user know result
 			if(removedMenuItem != null)
-				System.out.println("Sucessfully Removed the MenuItem \n");
+				{
+				System.out.println("Sucessfully Removed the Following Menu Item\n");
+				System.out.println(removedMenuItem.toString());
+				}//if
+				
 			else if(myOrder.getSize() == 0)
 				System.out.println("Removing the MenuItem has Failed Due to Order Being Empty \n");
 			break;

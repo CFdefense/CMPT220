@@ -136,7 +136,7 @@ public class OrderFarrell
 		for(i = 0;i<mySize;i++)
 		{
 			//find the highest
-			if(myMenuItems[i].getPrice() > mostCostly) //should this find the cost*quan or just cost
+			if(myMenuItems[i].getPrice() > mostCostly) 
 				{
 				mostCostly = myMenuItems[i].getPrice();
 				positionToRemove = i;
