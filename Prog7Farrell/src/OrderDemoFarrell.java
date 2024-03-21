@@ -30,6 +30,7 @@ public class OrderDemoFarrell
 		boolean resultSuccess = false;
 		MenuItemFarrell removedMenuItem;
 		MenuItemFarrell newItem;
+		int totalItems = 0;
 	//Welcome user and print menu, looping the menu until quit is chosen
 	do
 	{
@@ -54,17 +55,17 @@ public class OrderDemoFarrell
 			//error check the price and the quantity and get response from user
 			do
 			{
-				System.out.println("What is the Menu Item's Price?");
-				newItemPrice = keyboard.nextDouble();
-			}//do
-			while(newItemPrice <= 0);
-			do
-			{
 				System.out.println("How Many Would You Like?");
 				newItemQuantity = keyboard.nextInt();
 			}//do
 			while(newItemQuantity <= 0);
 			
+			do
+			{
+				System.out.println("What is the Menu Item's Price?");
+				newItemPrice = keyboard.nextDouble();
+			}//do
+			while(newItemPrice <= 0);
 			//create new menuItem and add to order
 			newItem = new MenuItemFarrell(newItemName, newItemQuantity, newItemPrice); 
 			resultSuccess = myOrder.addToOrder(newItem);
@@ -78,27 +79,28 @@ public class OrderDemoFarrell
 		//Find the Least Expensive MenuItem
 		case 'L':
 			if(myOrder.findLeastExpensive() != null)
-				System.out.println("The Least Expensive Item is the "+ myOrder.findLeastExpensive().getName() + "\n");
+				System.out.println("The Least Expensive Item is the \n"+ myOrder.findLeastExpensive().toString() + "\n");
 			else
 				System.out.println("Order is Empty \n");
 			break;
 		//Find the Most Expensive MenuItem
 		case 'M':
 			if(myOrder.findLeastExpensive() != null)
-			System.out.println("The Most Expensive Item is the "+myOrder.findMostExpensive().getName() + "\n");
+			System.out.println("The Most Expensive Item is the \n"+myOrder.findMostExpensive().toString() + "\n");
 			else
 				System.out.println("Order is empty \n");
 			break;
 		//Find the number of MenuItems
 		case 'N':
-			System.out.println("The Order has " + myOrder.getSize() + " Menu Items\n");
+			totalItems = myOrder.findMyQuant();
+			System.out.println("The Order has " + totalItems + " Menu Items\n");
 			break;
 		//Find the total cost of all MenuItems
 		case 'T':
 			if(myOrder.calcTotal() != 0)
-				System.out.printf("The total cost of all MenuItems is %.2f\n\n", myOrder.calcTotal());
+				System.out.printf("The total cost of all MenuItems is $%.2f\n\n", myOrder.calcTotal());
 			else
-				System.out.println("Order is empty\n");
+				System.out.printf("$%.2f\n\n",myOrder.calcTotal());
 			break;
 		//Print out details about all MenuItems
 		case 'P':

@@ -53,10 +53,10 @@ public class OrderFarrell
 		//for total the cost of the order
 		for(int i = 0; i < mySize;i++)
 		{
-			if(myMenuItems[0].getPrice() > mostExpensive)
+			if(myMenuItems[i].getPrice() > mostExpensive)
 				{
 					mostExpensiveItem = myMenuItems[i];
-					mostExpensive = myMenuItems[0].getPrice();
+					mostExpensive = myMenuItems[i].getPrice();
 				}//if
 		}//for
 		return mostExpensiveItem;
@@ -75,10 +75,10 @@ public class OrderFarrell
 		//for total the cost of the order
 		for(int i = 0; i < mySize;i++)
 		{
-			if(myMenuItems[0].getPrice() < leastExpensive)
+			if(myMenuItems[i].getPrice() < leastExpensive)
 				{
 					leastExpensiveItem = myMenuItems[i];
-					leastExpensive = myMenuItems[0].getPrice();
+					leastExpensive = myMenuItems[i].getPrice();
 				}//if
 		}//for
 		return leastExpensiveItem;
@@ -110,9 +110,8 @@ public class OrderFarrell
 		{
 		System.out.println("This Order Contains the following...");
 		//for each item of type MenuItemFarrell in myMenuItems we print its name, quantity and price
-		for(MenuItemFarrell item : myMenuItems)
-			if(item != null)
-				System.out.printf("Item: %s - Quantity: %d - Price: $%.2f ea\n", item.getName(), item.getQuant(), item.getPrice());
+		for(int i = 0;i<mySize;i++)
+				System.out.printf("Item: %s - Quantity: %d - Price: $%.2f ea\n", myMenuItems[i].getName(), myMenuItems[i].getQuant(), myMenuItems[i].getPrice());
 		System.out.println();
 		}//if
 		else
@@ -153,5 +152,14 @@ public class OrderFarrell
 		return result;
 		
 	}//removeItem
+	public int findMyQuant()
+	{
+		int totalQuant = 0;
+		for(int i = 0;i<mySize;i++)
+		{
+			totalQuant += myMenuItems[i].getQuant();
+		}//for
+		return totalQuant;
+	}//findMyQuant
 }//OrderFarrell
 

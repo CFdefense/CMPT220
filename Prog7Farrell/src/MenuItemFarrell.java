@@ -85,9 +85,9 @@ public class MenuItemFarrell
 	 */
 	public String toString()
 	{
-		String ans = "My Name is "+ myName + "\n";
-		ans+= "My Quantity is "+ myQuant + "\n";
-		ans+= "My Price is " + myPrice + "\n";
+		String ans = "Name: "+ myName + "\n";
+		ans+= "Quantity: "+ myQuant + "\n";
+		ans+= "Price: $" + myPrice + "\n";
 		return ans;
 	}//toString
 
