@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * @author Christian Farrell <br>
  * 
@@ -13,12 +14,17 @@
  *Certification of Authenticity: <br>
  *I certify that this lab is entirely my own work. <br>
  */
-import java.util.*;
 public class OrderDemoFarrell 
 {
-	//Declare and Initialize Scanner 
+	/**
+	 * Scanner Object Declared and Intialized
+	 */
 	static Scanner keyboard = new Scanner(System.in);
 		
+	/**
+	 * Main Method to print a menu to the user, then execute the input, and repeat until q is selected
+	 * @param args
+	 */
 	public static void main(String[] args) 
 	{
 		//Initialize Variables

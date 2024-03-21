@@ -5,10 +5,18 @@ import java.util.*;
 public class OrderFarrell
 {
 	//Initialize Variables
+	/**
+	 * MenuItemFarrell array to contain MenuItems
+	 */
 	private MenuItemFarrell[] myMenuItems;
+	/**
+	 * Int mySize to keep track of how many MenuItems exist within MenuItemFarrell[]
+	 */
 	private int mySize;
 	
-	//Null Constructor
+	/**
+	 * Null Constructor for OrderFarrell Class
+	 */
 	public OrderFarrell()
 	{
 		myMenuItems = new MenuItemFarrell[8];
@@ -152,6 +160,11 @@ public class OrderFarrell
 		return result;
 		
 	}//removeItem
+	
+	/**
+	 * findMyQuant method accepts no parameters and returns the total amount of quantity through the order
+	 * @return totalQuant	integer for the total quantity of items ordered
+	 */
 	public int findMyQuant()
 	{
 		int totalQuant = 0;
