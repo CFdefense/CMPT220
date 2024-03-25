@@ -1,32 +1,40 @@
 import java.io.*;
 import java.util.*;
 /**
+ * Christian Farrell <br>
+ * 
  * @author Christian Farrell <br>
  * 
- * Prog 7 <br>
- * Due Date and Time: 2/21/24 before 9:00 AM <br>
+ * Prog 8 <br>
+ * Due Date and Time: 2/25/24 before 9:00 AM <br>
  * 
- * Purpose: This program will serve as a McDonalds ordering system, users will be able to add to, manipulate, and view various information about their orders. <br>
+ * Purpose: This program will serve as a McDonalds ordering system, first a file will be read, then users will be able to add to, manipulate, and view various information about their orders. <br>
  * 
- * Input: userInput - Menu Choice, newItemName - Item to add to Order, newItemQuality - How Many Items to add, and newItemPrice - The Price of That Item <br>
+ * Input: fileInput, userInput - Menu Choice, newItemName - Item to add to Order, newItemQuality - How Many Items to add, and newItemPrice - The Price of That Item <br>
  * 
  * Output: resultSucess, leastExpensiveItem, mostExpensiveItem, orderSize, totalCost, removedItemSuccess <br>
  * 
- *Certification of Authenticity: <br>
- *I certify that this lab is entirely my own work. <br>
+ * Certification of Authenticity: <br>
+ * I certify that this lab is entirely my own work. <br>
  */
 public class OrderDemoFarrell 
 {
 	/**
-	 * Scanner Object Declared and Intialized
+	 * Scanner Object Declared and Initialized
 	 */
 	static Scanner keyboard = new Scanner(System.in);
 	
-	
-		
+	/**
+     * Constructs an OrderDemoFarrell object.
+     * This is the default constructor.
+     */
+    public OrderDemoFarrell() {
+        //null
+    }//OrderDemoFarrell
+
 	/**
 	 * Main Method to print a menu to the user, then execute the input, and repeat until q is selected
-	 * @param args
+	 * @param args Console Input
 	 */
 	public static void main(String[] args) 
 	{
@@ -52,22 +60,22 @@ public class OrderDemoFarrell
 	    File inputFile = new File(fileName);
 	    
 	    try { 
-	    //Create a second Scanner object, this one for reading from the file
-	    Scanner input = new Scanner(inputFile);
-	    
-	    //Read first line of the file to find out how many numbers will follow.
-	    numItems = input.nextInt();
-	    
-	    //loop through items determined from first line of file 
-	    for(int i = 0;i<numItems;i++)
-	    {
-	    	newItemName = input.next();
-	    	newItemQuantity = input.nextInt();
-	    	newItemPrice = input.nextDouble();
-	    	newItem = new MenuItemFarrell(newItemName, newItemQuantity, newItemPrice);
-	    	myOrder.addToOrder(newItem);
-	    	
-	    }//for
+		    //Create a second Scanner object, this one for reading from the file
+		    Scanner input = new Scanner(inputFile);
+		    
+		    //Read first line of the file to find out how many numbers will follow.
+		    numItems = input.nextInt();
+		    
+		    //loop through items determined from first line of file 
+		    for(int i = 0;i<numItems;i++)
+		    {
+		    	newItemName = input.next();
+		    	newItemQuantity = input.nextInt();
+		    	newItemPrice = input.nextDouble();
+		    	newItem = new MenuItemFarrell(newItemName, newItemQuantity, newItemPrice);
+		    	myOrder.addToOrder(newItem);
+		    	
+		    }//for
 	    }//try
 	    
 	    catch(FileNotFoundException ex)
