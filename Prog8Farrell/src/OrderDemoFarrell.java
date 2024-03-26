@@ -1,12 +1,6 @@
 import java.io.*;
 import java.util.*;
-<<<<<<< HEAD
-/**Christian Farrell
-=======
 /**
- * Christian Farrell <br>
- * 
->>>>>>> 23e1af59863201eac07699ad72dddfa5c57d57a2
  * @author Christian Farrell <br>
  * 
  * Prog 8 <br>
@@ -27,15 +21,6 @@ public class OrderDemoFarrell
 	 * Scanner Object Declared and Initialized
 	 */
 	static Scanner keyboard = new Scanner(System.in);
-	
-	/**
-<<<<<<< HEAD
-	 * Empty Default Constructor needed to make JavaDoc Happy
-	 */
-	public OrderDemoFarrell()
-	{
-		
-	}//OrderDemoFarrell
 		
 	/**
 	 * Main Method to print a menu to the user, then execute the input, and repeat until q is selected
@@ -51,7 +36,6 @@ public class OrderDemoFarrell
 	/**
 	 * Main Method to print a menu to the user, then execute the input, and repeat until q is selected
 	 * @param args Console Input
->>>>>>> 23e1af59863201eac07699ad72dddfa5c57d57a2
 	 */
 	public static void main(String[] args) 
 	{
