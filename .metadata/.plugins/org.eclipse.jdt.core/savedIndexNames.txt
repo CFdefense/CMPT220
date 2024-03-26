@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 INDEX VERSION 1.134+C:\Users\Christian\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
 2351700878.index
 766559609.index
+=======
+INDEX VERSION 1.134+C:\Users\CFdef\Documents\GitHub\CMPT220\.metadata\.plugins\org.eclipse.jdt.core
+4103133141.index
+>>>>>>> 23e1af59863201eac07699ad72dddfa5c57d57a2
 1865797976.index
+766559609.index
