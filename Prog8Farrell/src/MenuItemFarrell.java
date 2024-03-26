@@ -1,10 +1,15 @@
-
+import java.text.*;
 import java.util.*;
 /**
  * This Class will control the creation and modification of Menu item Elements
  */
 public class MenuItemFarrell 
 {
+	/**
+	 * Creation of formatting for price
+	 */
+	static DecimalFormat moneyStyle = new DecimalFormat("0.00");
+	
 	//Initialize Variables 
 	/**
 	 *String for Name of Menu Item
@@ -87,7 +92,7 @@ public class MenuItemFarrell
 	{
 		String ans = "Name: "+ myName + "\n";
 		ans+= "Quantity: "+ myQuant + "\n";
-		ans+= "Price: $" + myPrice + "\n";
+		ans+= "Price: $" + moneyStyle.format(myPrice) + "\n";
 		return ans;
 	}//toString
 

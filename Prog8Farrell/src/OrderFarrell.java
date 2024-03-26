@@ -19,7 +19,10 @@ public class OrderFarrell
 	 */
 	public OrderFarrell()
 	{
+		//Initialize Variables
 		myMenuItems = new MenuItemFarrell[8];
+		for(int i = 0;i<myMenuItems.length;i++)
+			myMenuItems[i] = new MenuItemFarrell();
 		mySize = 0;
 	}//OrderFarrell
 	

@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-/**
+/**Christian Farrell
  * @author Christian Farrell <br>
  * 
  * Prog 7 <br>
@@ -18,15 +18,21 @@ import java.util.*;
 public class OrderDemoFarrell 
 {
 	/**
-	 * Scanner Object Declared and Intialized
+	 * Scanner Object Declared and Initialized
 	 */
 	static Scanner keyboard = new Scanner(System.in);
 	
-	
+	/**
+	 * Empty Default Constructor needed to make JavaDoc Happy
+	 */
+	public OrderDemoFarrell()
+	{
+		
+	}//OrderDemoFarrell
 		
 	/**
 	 * Main Method to print a menu to the user, then execute the input, and repeat until q is selected
-	 * @param args
+	 * @param args	ConsoleLine Input
 	 */
 	public static void main(String[] args) 
 	{
@@ -42,7 +48,9 @@ public class OrderDemoFarrell
 		int totalItems = 0;
 		String fileName = null;
 		int numItems = 0;
-		
+		MenuItemFarrell theLeastExpensive = null;
+		MenuItemFarrell theMostExpensive = null;
+		double calculatedTotal = 0.0;
 		
 		//ask the user for the path and name to the file
 	    System.out.print("Enter a filename: ");
@@ -143,15 +151,17 @@ public class OrderDemoFarrell
 			break;
 		//Find the Least Expensive MenuItem
 		case 'L':
-			if(myOrder.findLeastExpensive() != null)
-				System.out.println("The Least Expensive Item is the \n"+ myOrder.findLeastExpensive().toString() + "\n");
+			theLeastExpensive = myOrder.findLeastExpensive();
+			if(theLeastExpensive != null)
+				System.out.println("The Least Expensive Item is the \n"+ theLeastExpensive.toString() + "\n");
 			else
 				System.out.println("Order is Empty \n");
 			break;
 		//Find the Most Expensive MenuItem
 		case 'M':
-			if(myOrder.findLeastExpensive() != null)
-			System.out.println("The Most Expensive Item is the \n"+myOrder.findMostExpensive().toString() + "\n");
+			theMostExpensive = myOrder.findMostExpensive();
+			if(theMostExpensive != null)
+			System.out.println("The Most Expensive Item is the \n" + theMostExpensive.toString() + "\n");
 			else
 				System.out.println("Order is empty \n");
 			break;
@@ -162,10 +172,11 @@ public class OrderDemoFarrell
 			break;
 		//Find the total cost of all MenuItems
 		case 'T':
-			if(myOrder.calcTotal() != 0)
-				System.out.printf("The total cost of all MenuItems is $%.2f\n\n", myOrder.calcTotal());
+			calculatedTotal = myOrder.calcTotal();
+			if(calculatedTotal != 0)
+				System.out.printf("The total cost of all MenuItems is $%.2f\n\n", calculatedTotal);
 			else
-				System.out.printf("$%.2f\n\n",myOrder.calcTotal());
+				System.out.printf("$%.2f\n\n", calculatedTotal);
 			break;
 		//Print out details about all MenuItems
 		case 'P':
@@ -179,9 +190,8 @@ public class OrderDemoFarrell
 				{
 				System.out.println("Sucessfully Removed the Following Menu Item\n");
 				System.out.println(removedMenuItem.toString());
-				}//if
-				
-			else if(myOrder.getSize() == 0)
+				}//if	
+			else
 				System.out.println("Removing the MenuItem has Failed Due to Order Being Empty \n");
 			break;
 		//Quit
