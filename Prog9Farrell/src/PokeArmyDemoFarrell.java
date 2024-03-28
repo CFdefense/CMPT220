@@ -24,6 +24,7 @@ public class PokeArmyDemoFarrell {
 		boolean deleteResult = false;
 		PokemonFarrell retrievedPokemon = null;
 		double totalPower = 0.0;
+		double totalBonusPower = 0.0;
 		
 		//ask the user for the path and name to the file
 	    System.out.print("Enter a filename: ");
@@ -130,11 +131,11 @@ public class PokeArmyDemoFarrell {
 				System.out.println("What Program Would You Like to Retrieve?");
 				retrievedPokemon = myPokemonArmy.retrieve(keyboard.next());
 				if(retrievedPokemon != null) {
-					System.out.println("Pokemon Found!");
+					System.out.println("Pokemon Found! \n");
 					System.out.println(retrievedPokemon.toString());				
 					}//if
 				else
-					System.out.println("Pokemon Not Found");
+					System.out.println("Pokemon Not Found \n");
 				break;
 			//Get the total power of the Pokemon army	
 			case '5':
@@ -143,15 +144,27 @@ public class PokeArmyDemoFarrell {
 				break;
 			//Get the total bonus power of the Pokemon army
 			case '6':
+				totalBonusPower = myPokemonArmy.calcBonusPower();
+				System.out.println("The Total Bonus Power is " + totalBonusPower + "\n");
 				break;
 			//Determine whether the army is empty
 			case '7':
+				if(myPokemonArmy.isEmpty() == true)
+					System.out.println("The Army is Empty\n");
+				else
+					System.out.println("The Army is Not Empty\n");	
 				break;
 			//Determine whether the army is full
 			case '8':
+				if(myPokemonArmy.isFull() == true)
+					System.out.println("The Army is Full\n");
+				else
+					System.out.println("The Army is Not Full\n");	
 				break;
 			//Clear the army
 			case '9':
+				myPokemonArmy.clear();
+				System.out.println("Army Cleared \n");
 				break;
 			//Quit
 			case '0':

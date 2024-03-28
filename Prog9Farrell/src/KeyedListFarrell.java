@@ -19,8 +19,10 @@ public class KeyedListFarrell {
 	public int getSize() 
 	{return(mySize);}//getSize
 	
+	//Clear the Army
 	public void clear() {
-		
+		for(int i = 0 ; i < mySize ; i++)
+			myArmy[i] = new PokemonFarrell();
 	}//clear
 	
 	//findIndex of target keyValue using Binary Search
