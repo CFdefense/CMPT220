@@ -81,20 +81,15 @@ public class KeyedListFarrell {
 	//
 	public PokemonFarrell retrieve(String keyValue) {
 		//Instance Variables
-		PokemonFarrell found = null;
-		int head = myArmy.length;
-		int tail = 0;
-		int mid = 0;			
-		while((found == null) && (head != tail)) {
-			mid = (head + tail) / 2;
-			if(myArmy[mid].getName().equalsIgnoreCase(keyValue)) 
-			found = myArmy[mid];
-			else if(myArmy[mid].getName().compareToIgnoreCase(keyValue) > 0)
-				tail = mid;
-				else
-					head = mid;
-				}//while
-				return found;
+		PokemonFarrell retrieved = null;
+		int i = 0;
+		while((retrieved == null) && (i < mySize))
+		{
+			if((myArmy[i].getName().equalsIgnoreCase(keyValue)))
+				retrieved = myArmy[i];
+			i++;
+		}//if
+		return retrieved;
 	}//retrieve
 	
 	//Check if the list is empty
