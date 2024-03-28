@@ -20,6 +20,8 @@ public class PokeArmyDemoFarrell {
 		double addNewPower = 0.0;
 		boolean addSuccess = false;
 		PokemonFarrell addNewPoke;
+		String deletePokemon = "";
+		boolean deleteResult = false;
 		
 		//ask the user for the path and name to the file
 	    System.out.print("Enter a filename: ");
@@ -108,6 +110,13 @@ public class PokeArmyDemoFarrell {
 					System.out.println("Pokemon Failed to be Added");
 				break;
 			case '2':
+				System.out.println("What is the name of the Pokemon you wish to delete?");
+				deletePokemon = keyboard.next();
+				deleteResult = myPokemonArmy.remove(deletePokemon);
+				if(deleteResult == true)
+					System.out.println("Pokemon Successfully Deleted");
+				else
+					System.out.println("Pokemon Failed to be Deleted");
 				break;
 				//Print Pokemon in the Army
 			case '3':

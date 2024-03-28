@@ -39,9 +39,9 @@ public class PokemonFarrell {
 		myPower = newPower;}//setPower
 	//toString function
 	public String toString() {
-		String ans = "Name :" + myName;
-		ans += "Multiplier : "+ myMultiplier;
-		ans += "Power : " + myPower;
+		String ans = "Name : " + myName + "\n";
+		ans += "Multiplier : "+ myMultiplier + "\n";
+		ans += "Power : " + myPower + "\n";
 		return ans;
 	}
 }//PokemonFarrell
