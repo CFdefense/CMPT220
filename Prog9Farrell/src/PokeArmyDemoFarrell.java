@@ -1,11 +1,39 @@
 import java.io.*;
 import java.util.*;
-
+/**
+ * Christian Farrell
+ * @author Christian Farrell <br>
+ * 
+ * Prog 9 <br>
+ * Due Date and Time: 2/25/24 before 9:00 AM <br>
+ * 
+ * Purpose: This program will serve as a Pokemon Army Builder, users will be able to read in, manipulate and get data about the Pokemon army. <br>
+ * 
+ * Input: userInput, addNewName, addNewMultiplier, addNewPower, deletePokemon, retrievedPokemon, <br>
+ * 
+ * Output: addSuccess, deleteResult, retrievedPokemon, totalPower, totalBonusPower, isFull, isEmpty, PokemonList<br>
+ * 
+ * Certification of Authenticity: <br>
+ * I certify that this lab is entirely my own work. <br>
+ */
 public class PokeArmyDemoFarrell {
 	
+	/**
+	 * Keyboard Scanner to read in user inputs
+	 */
 	static Scanner keyboard = new Scanner(System.in);
-
+	/**
+	 * Empty Constructor to please JavaDoc
+	 */
+	public PokeArmyDemoFarrell() {
+	}//PokeArmyDemoFarrell
+	
+	/**
+	 * Main Method to Take in File Input, Then Print and Run Menu 
+	 * @param args	ConsoleLineInput
+	 */
 	public static void main(String[] args) {
+		
 		//Initialize Variables
 		String fileName = null;
 		int numItems = 0;
