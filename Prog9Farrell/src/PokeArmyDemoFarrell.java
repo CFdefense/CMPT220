@@ -128,10 +128,16 @@ public class PokeArmyDemoFarrell {
 				System.out.println("Please Enter The Pokemon's Information");
 				System.out.println("Name: ");
 				addNewName = keyboard.next();
-				System.out.println("Multiplier: ");
-				addNewMultiplier = keyboard.nextInt();
+				do {
+					System.out.println("Multiplier: ");
+					addNewMultiplier = keyboard.nextInt();
+				}//do
+				while((addNewMultiplier < 0));
+				do {
 				System.out.println("Power: ");
 				addNewPower = keyboard.nextDouble();
+				}//do
+				while(addNewPower < 0);
 				//Create and attempt to add the New Pokemon
 				addNewPoke = new PokemonFarrell(addNewName, addNewMultiplier, addNewPower);
 				addSuccess = myPokemonArmy.add(addNewPoke);

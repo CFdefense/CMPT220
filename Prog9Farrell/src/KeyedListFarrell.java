@@ -166,7 +166,7 @@ public class KeyedListFarrell {
 			System.out.println(myArmy[i].toString());
 		}
 		else
-			System.out.println("Army Is Empty");
+			System.out.println("Army Is Empty\n");
 	}//print
 	
 	/**
