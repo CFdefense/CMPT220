@@ -33,6 +33,7 @@ public class KeyedListFarrell {
 	 * Clear Method to 'Reset' Pokemon Army
 	 */
 	public void clear() {
+		//By setting the head to null, the entire list is lost essentially clearing the list
 		myHead = null;
 	}//clear
 	
