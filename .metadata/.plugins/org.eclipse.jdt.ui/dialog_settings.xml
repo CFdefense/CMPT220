@@ -48,13 +48,18 @@
 		<item key="nonavbar" value="false"/>
 		<item key="openinbrowser" value="false"/>
 		<item key="source" value="17"/>
-		<item key="antpath" value="C:\Users\CFdef\Documents\GitHub\CMPT220\Prog9Farrell\javadoc.xml"/>
-		<item key="destdir" value="C:\Users\CFdef\Documents\GitHub\CMPT220\Prog9Farrell\doc"/>
+		<item key="antpath" value="C:\Users\christian.farrell1\Documents\GitHub\CMPT220\Prog10Farrell\javadoc.xml"/>
+		<item key="destdir" value="C:\Users\christian.farrell1\Documents\GitHub\CMPT220\Prog10Farrell\doc"/>
 		<section name="projects">
 			<section name="Prog9Farrell">
 				<item key="href" value=""/>
 				<item key="destdir" value="C:\Users\CFdef\Documents\GitHub\CMPT220\Prog9Farrell\doc"/>
 				<item key="antpath" value="C:\Users\CFdef\Documents\GitHub\CMPT220\Prog9Farrell\javadoc.xml"/>
+			</section>
+			<section name="Prog10Farrell">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\christian.farrell1\Documents\GitHub\CMPT220\Prog10Farrell\doc"/>
+				<item key="antpath" value="C:\Users\christian.farrell1\Documents\GitHub\CMPT220\Prog10Farrell\javadoc.xml"/>
 			</section>
 		</section>
 	</section>
