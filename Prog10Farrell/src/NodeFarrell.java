@@ -38,20 +38,36 @@ public class NodeFarrell {
 		myNext = newNext;
 	}//NodeFarrell
 	
+	/**
+	 * Method to return current Node data
+	 * @return myData	The Pokemon Object stored in the Node
+	 */
 	public PokemonFarrell getData() {
 		return myData;
 	}//getPokemon
 	
+	/**
+	 * Method to return the Next Node in the Linked List
+	 * @return myNext	The Next Node Object
+	 */
 	public NodeFarrell getNext() {
 		return myNext;
 	}//getNext
 	
+	/**
+	 * Method to update the Pokemon Object Data in the Node
+	 * @param newPoke	The New Pokemon Objct
+	 */
 	public void setData(PokemonFarrell newPoke) {
 		myData = newPoke;
 	}//setPokemon
 	
+	/**
+	 * Method to update the Next Node in the Linked List
+	 * @param newNext	The New Next Node 
+	 */
 	public void setNext(NodeFarrell newNext) {
 		myNext = newNext;
-	}//setNext}
+	}//setNext
 	
 }//NodeFarrell
