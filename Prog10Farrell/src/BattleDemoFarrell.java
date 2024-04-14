@@ -4,19 +4,19 @@ import java.util.*;
  * Christian Farrell
  * @author Christian Farrell <br>
  * 
- * Prog 9 <br>
- * Due Date and Time: 2/25/24 before 9:00 AM <br>
+ * Prog 11 <br>
+ * Due Date and Time: 4/22/24 before 9:00 AM <br>
  * 
- * Purpose: This program will serve as a Pokemon Army Builder, users will be able to read in, manipulate and get data about the Pokemon army. <br>
+ * Purpose: This program will serve as a 'War Style' Pokemon Fighting Game, users will draw Pokemon Cards from a deck and fight using their Pokemon <br>
  * 
- * Input: userInput, addNewName, addNewMultiplier, addNewPower, deletePokemon, retrievedPokemon, <br>
+ * Input:  <br>
  * 
- * Output: addSuccess, deleteResult, retrievedPokemon, totalPower, totalBonusPower, isFull, isEmpty, PokemonList<br>
+ * Output: <br>
  * 
  * Certification of Authenticity: <br>
  * I certify that this lab is entirely my own work. <br>
  */
-public class PokeArmyDemoFarrell {
+public class BattleDemoFarrell {
 	
 	/**
 	 * Keyboard Scanner to read in user inputs
@@ -25,7 +25,7 @@ public class PokeArmyDemoFarrell {
 	/**
 	 * Empty Constructor to please JavaDoc
 	 */
-	public PokeArmyDemoFarrell() {
+	public BattleDemoFarrell() {
 	}//PokeArmyDemoFarrell
 	
 	/**
