@@ -22,6 +22,8 @@ public class BattleDemoFarrell {
 	 * Keyboard Scanner to read in user inputs
 	 */
 	static Scanner keyboard = new Scanner(System.in);
+//add public static final boolean DEBUG = true; Then add Trace Sys.out to each step to trace the moves made.
+	
 	/**
 	 * Empty Constructor to please JavaDoc
 	 */
