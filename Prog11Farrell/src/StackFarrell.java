@@ -48,18 +48,4 @@ public class StackFarrell {
 		return result;
 	}//pop
 	
-	//copy Method
-	public void copy(StackFarrell firstStack, StackFarrell secondStack) {
-		//instance variables
-		StackFarrell tempStack = new StackFarrell();
-		
-		//Copy First Stack to Temp
-		while(!firstStack.isEmpty()) 
-			tempStack.push(firstStack.pop());
-		  
-		//Copy Temp to Second Stack
-		while(!tempStack.isEmpty()) 
-			secondStack.push(tempStack.pop());
-	}//copy
-	
 }//StackFarrell

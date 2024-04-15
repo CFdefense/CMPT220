@@ -173,7 +173,7 @@ public class KeyedListFarrell {
 	public double getTotalPower() {
 		//Instance Variables
 		double totalPower = 0;
-		NodeFarrell curr = myHead;
+		NodeFarrell curr = myHead;  
 		//Sum the power
 		while(curr != null) {
 			totalPower += curr.getData().getPower();
