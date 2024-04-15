@@ -16,13 +16,13 @@ public class StackFarrell {
 	
 	/**
 	 * isFull Method to Determine if the Stack is Full
-	 * @return
+	 * @return false	Will always be false
 	 */
-	public boolean isFull() {return false;}//isFull will always be false
+	public boolean isFull() {return false;}//isFull 
 	
 	/**
 	 * isEmpty Method to Determine if the Stack is Empty
-	 * @return
+	 * @return myTop's value	If there is null return true else false
 	 */
 	public boolean isEmpty() {return myTop == null;}//isEmpty
 	
