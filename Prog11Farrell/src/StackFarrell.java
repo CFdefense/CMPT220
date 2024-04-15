@@ -1,21 +1,36 @@
-//Stack Class
-
+/**
+ * StackFarrell Class Describes a Stack LIFO Data Structure Comprised of Nodes  
+ */
 public class StackFarrell {
-	//Instance Variables
+	/**
+	 * Node to show the top Node in the Stack
+	 */
 	private NodeFarrell myTop;
 	
-	//Default Constructor
+	/**
+	 * Default Constructor
+	 */
 	public StackFarrell() {
 		myTop = null;
 	}//StackFarrell
 	
-	//isFull Method
-	public boolean isFull() {return false;}//isFull
+	/**
+	 * isFull Method to Determine if the Stack is Full
+	 * @return
+	 */
+	public boolean isFull() {return false;}//isFull will always be false
 	
-	//isEmpty Method
+	/**
+	 * isEmpty Method to Determine if the Stack is Empty
+	 * @return
+	 */
 	public boolean isEmpty() {return myTop == null;}//isEmpty
 	
-	//push Method
+	/**
+	 * push Method to Add a New Node to the top of the Stack
+	 * @param newPoke	The Data of the Node to be added to the Stack
+	 * @return result	The Success or Failure of the push
+	 */
 	public boolean push(PokemonCardFarrell newPoke) {
 		//instance variables
 		boolean result = false;
@@ -33,7 +48,10 @@ public class StackFarrell {
 		return result;
 	}//push
 	
-	//pop Method
+	/**
+	 * pop Method to remove and return the top Node's Data in the Stack
+	 * @return result	Pokemon Card at the Top of the Stack
+	 */
 	public PokemonCardFarrell pop() {
 		//Instance Variables
 		PokemonCardFarrell result = null;
