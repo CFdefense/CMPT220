@@ -25,7 +25,7 @@ public class BattleDemoFarrell {
 	/**
 	 * boolean to toggle Debug Mode
 	 */
-	public static final boolean DEBUG = true;
+	public static final boolean DEBUG = false;
 	
 	/**
 	 * Empty Constructor to please JavaDoc
@@ -97,12 +97,12 @@ public class BattleDemoFarrell {
 			turnCounter++;
 		}//while
 		
-		//Determine Winner
-		winner = determineWinner(playerOnePlay, playerOneDiscard, turnCounter);
-		
 		//update players total card holdings by counting both decks
 		playerOneCount = count(playerOnePlay) + count(playerOneDiscard);
 		playerTwoCount = count(playerTwoPlay) + count(playerTwoDiscard);
+		
+		//Determine Winner
+		winner = determineWinner(playerOneCount, playerTwoCount, turnCounter);
 		
 		//print game results to the console
 		printResults(numItems, turnCounter, playerOneCount, playerTwoCount, winner);
@@ -262,25 +262,23 @@ public class BattleDemoFarrell {
 	
 	/**
 	 * determineWinner method to Determine the Overall Game Winner Once Game Cycle has Concluded
-	 * @param p1Play	Player 1's Play Deck
-	 * @param p1Discard	Player 1's Discard Deck
+	 * @param p1Amount	Player 1's total cards
+	 * @param p2Amount	Player 2's total cards
 	 * @param turns	The Total Turns the Game Too
 	 * @return winner	A String Representing the Winner of the Game	
 	 */
-	public static String determineWinner(StackFarrell p1Play, StackFarrell p1Discard, int turns) {
+	public static String determineWinner(int p1Amount, int p2Amount, int turns) {
 		//Instance Variables
 		String winner = "No One";
 		//determine if the turns exceeded the alloted amount
-		if(turns != 1000)
-		{
-			//Using only player 1's decks we can deduce the Winner of the Game
-			if(p1Play.isEmpty() && p1Discard.isEmpty()) {
-				winner = "Player 2";
-			}//if
-			else {
-				winner = "Player 1";
-			}//else
+		//Using Amount of Cards to Determine Winner
+		if(p2Amount > p1Amount) {
+			winner = "Player 2";
 		}//if
+		else if(p1Amount > p2Amount){
+			winner = "Player 1";
+		}//else
+		
 		return winner;
 	}//determineWinner
 	
@@ -339,7 +337,7 @@ public class BattleDemoFarrell {
 			//Determine the if there was a clear winner
 			if(turns < 1000)
 				System.out.println("The game ended with a clear winner");
-			else
+			else 
 				System.out.println("The game took too long");
 			System.out.println("Player 1 ended with " + onesCount + " Cards");
 			System.out.println("Player 2 ended with " + twosCount + " Cards");
