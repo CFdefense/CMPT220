@@ -1,25 +1,34 @@
-//Christian Farrell
-//Prog 4 Resubmit
-//Due 04/29/24 before 9:00 AM
-//
-//Purpose: Compute and Return Customer Bills for Music Orders of Varying Size, Then Compute and Return Summary Statistics for All Customers
-//
-//Input: Customer ID, Customer Name, Number of Songs, Song Length For Each Song, Genre For Each Song
-//
-//Output: Customer ID, Customer Name, Number of Songs Purchased, Total Song Costs, Service Charge, Total Amount Due,
-//Total Amount of Serviced Customers, Highest Bill Amount, Customer ID for Highest Bill, Lowest Bill Amount, Customer ID for Lowest Bill,
-//Total Cost of All Music Purchased, Average Customer Bill
-//
-//Certification of Authenticity: I certify that this lab is entirely my own work
-
-//IMPORTANT!!!!!!!! CHANGES MADE TO THE FOLLOWING LINES (93-99) (101-107) (135-165) (168-191) (193-207) (212-217)
-
 import java.util.*;
+/**
+ * Christian Farrell
+ * Prog 4 Resubmit
+ * Due 04/29/24 before 9:00 AM
+ * 
+ * Purpose: Compute and Return Customer Bills for Music Orders of Varying Size, Then Compute and Return Summary Statistics for All Customers
+ * 
+ * Input: Customer ID, Customer Name, Number of Songs, Song Length For Each Song, Genre For Each Song
+ * 
+ * Output: Customer ID, Customer Name, Number of Songs Purchased, Total Song Costs, Service Charge, Total Amount Due,
+ * Total Amount of Serviced Customers, Highest Bill Amount, Customer ID for Highest Bill, Lowest Bill Amount, Customer ID for Lowest Bill,
+ * Total Cost of All Music Purchased, Average Customer Bill
+ *
+ * Certification of Authenticity: I certify that this lab is entirely my own work
+ * 
+ * 
+ * //IMPORTANT!!!!!!!! CHANGES MADE TO THE FOLLOWING LINES (93-99) (101-107) (135-165) (168-191) (193-207) (212-217)
+ */
 public class MusicOrdersFarrell 
 {
-	//Declare Keyboard
+	/**
+	 * Keyboard Scanner to read in user inputs
+	 */
 	static Scanner keyboard = new Scanner(System.in);
 
+	/**
+	 * default constructor for JavaDoc
+	 */
+	public MusicOrdersFarrell() {}//MusicOrdersFarell
+	
 	/**
 	 * main Method to run our program sequence
 	 * @param args	Console Line Inputs
@@ -87,19 +96,22 @@ public class MusicOrdersFarrell
 			customerID = keyboard.nextInt();
 		}//while
 		
-		//Compute overallAverage and Print Post-Loop Summary
+		//Compute/error check overallAverage and lowest charge
+		//NEWCHANGE FIXED ERROR CHECKING FOR overallAverage and lowestCharge
 		if(numOfcustomers != 0)
 		overallAverage = (overallBill/numOfcustomers);
-		System.out.println("\nIn Total There Were "+numOfcustomers+" Customer(s) Processed");
-		System.out.printf("The Highest Bill Amount Was: $%.2f\n",(highestCharge));
-		System.out.println("The Customer ID Associated With The Highest Bill Was Customer #"+customerIDhighest);
-		//NEW CHANGE - Previous Code incorrectly displayed Double.MAX_VALUE given an empty ID, New Code checks and adjusts this. Also removed /100 from results
 		if(lowestCharge == Double.MAX_VALUE)
 			lowestCharge = 0;
+		
+		//Print Post-Loop Summary
+		System.out.println("\nIn Total There Were "+numOfcustomers+" Customer(s) Processed");
+		System.out.printf("The Highest Bill Amount Was: $%.2f\n",(highestCharge));
+		System.out.println("The Customer ID Associated With The Highest Bill Was Customer ID #"+customerIDhighest);
 		System.out.printf("The Lowest Bill Amount Was: $%.2f\n",(lowestCharge));
-		System.out.println("The Customer ID Associated With The Lowest Bill Was Customer #"+customerIDlowest);
+		System.out.println("The Customer ID Associated With The Lowest Bill Was Customer ID #"+customerIDlowest);
 		System.out.printf("The Total Cost of All Music Purchased Was: $%.2f\n",(overallBill));
 		System.out.printf("The Average Bill of All Purchase Amounts Was: $%.2f\n",(overallAverage));
+		
 	}//main
 
 	//NEW CHANGE - ADDED METHOD HEADER AND UPDATED RESULT
@@ -198,26 +210,22 @@ public class MusicOrdersFarrell
 	 * calcTotalDue Method Calculates the total cost of the order
 	 * @param totCost	The Total Calculated Cost of the Order
 	 * @param servCost	The Service Charge of the Order
-	 * @return result	The Sum of the Charges
+	 * @return result	The Sum of the calculated tax, total cost and service cost
 	 */
 	public static double calcTotalDue(double totCost, double servCost)
 	{
-		//Declare Variables
-		double tax = (totCost + servCost)*.08;
-		double result = tax + totCost + servCost;
-		
-		return result;
+		return (((totCost+servCost) * .08) + (totCost + servCost));
 	}//calcTotalDue
 	
 	//NEW CHANGE - ADDED HEADER
 	/**
-	 * 
-	 * @param customerNameResult
-	 * @param customerIDresult
-	 * @param numSongs
-	 * @param totalCostResult
-	 * @param serviceChargeResult
-	 * @param totalDueResult
+	 * outputResults Method to format and print the results of the customers order
+	 * @param customerNameResult	The Name of the Customer
+	 * @param customerIDresult	The Customer's ID
+	 * @param numSongs	The number of Songs purchased
+	 * @param totalCostResult	The Total Cost
+	 * @param serviceChargeResult	The Service Charge
+	 * @param totalDueResult	The Total Amount Due
 	 */
 	public static void outputResults(String customerNameResult, int customerIDresult, int numSongs, double totalCostResult, double serviceChargeResult, double totalDueResult)
 	{
